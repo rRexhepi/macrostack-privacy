@@ -21,6 +21,16 @@
       text-align: center;
     }
 
+    header img {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      margin-bottom: 16px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     header h1 {
       font-size: 2rem;
       font-weight: 700;
@@ -84,6 +94,7 @@
 <body>
 
 <header>
+  <img src="logo.png" alt="MacroStack AI" />
   <h1>MacroStack AI</h1>
   <p>Privacy Policy &nbsp;·&nbsp; Last updated March 2026</p>
 </header>
@@ -112,37 +123,36 @@
 
   <section>
     <h2>2. Camera &amp; Depth Sensor</h2>
-    <p>The App requests access to your device's camera and, on supported devices, the LiDAR/depth sensor for the following purposes:</p>
+    <p>The App requests access to your device's camera and, on supported devices, the depth sensor for the following purposes:</p>
     <ul>
       <li><strong>Barcode scanning</strong> — to look up packaged food nutrition data from a local database</li>
-      <li><strong>AI food recognition</strong> — to identify food items and estimate portion sizes using on-device or cloud AI (see Section 3)</li>
-      <li><strong>Depth sensing</strong> — to estimate food volume and portion size on supported devices</li>
+      <li><strong>AI food recognition</strong> — to identify food items and estimate portions</li>
+      <li><strong>Depth sensing</strong> — to assist with portion estimation on supported devices</li>
     </ul>
     <p style="margin-top:10px;">Camera images and depth data are processed in real time and are <strong>never stored, uploaded, or shared</strong>.</p>
   </section>
 
   <section>
     <h2>3. AI Features &amp; Third-Party Services</h2>
-    <p>The App uses AI to identify food and estimate nutrition. Depending on your device and configuration:</p>
+    <p>The App uses AI to help identify food and estimate nutrition information.</p>
     <ul>
       <li>
-        <strong>On-device AI (Gemini Nano via ML Kit)</strong> — runs entirely on your device. No data is sent externally.
-        Available on supported Pixel and other devices.
+        <strong>On-device AI</strong> — where available, AI processing runs entirely on your device and no data is sent externally.
       </li>
       <li>
-        <strong>Cloud AI (Google Gemini API)</strong> — if you choose to enter a Gemini API key, food descriptions
-        (text only — no images) are sent to Google's Gemini API to generate nutrition estimates.
-        This is <strong>optional</strong> and only active if you provide a key.
+        <strong>Cloud AI (Google Gemini API)</strong> — if you choose to enable cloud AI by providing an API key,
+        food descriptions (text only — no images or personal data) are sent to Google's Gemini API.
+        This is <strong>optional</strong> and only active if you explicitly configure it.
         Data sent is governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
       </li>
     </ul>
-    <p style="margin-top:10px;">Your Gemini API key is stored locally in your device's SharedPreferences/Keychain and is never transmitted to us.</p>
+    <p style="margin-top:10px;">Any API key you provide is stored securely in your device's Keychain and is never transmitted to us.</p>
   </section>
 
   <section>
     <h2>4. Food Database</h2>
     <p>
-      The App includes a local copy of the Open Food Facts database for barcode lookups.
+      The App includes a local food database for barcode lookups.
       All lookups happen entirely on-device. No queries or identifiers are sent to any external server.
     </p>
   </section>
