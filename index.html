@@ -106,7 +106,7 @@
 <header>
   <img src="logo.png" alt="MacroStack AI" />
   <h1>MacroStack AI</h1>
-  <p>Privacy Policy &nbsp;·&nbsp; Apple / iOS &nbsp;·&nbsp; Last updated March 2026</p>
+  <p>Privacy Policy &nbsp;&middot;&nbsp; Apple / iOS &nbsp;&middot;&nbsp; Last updated April 2026</p>
 </header>
 
 <main>
@@ -122,12 +122,12 @@
 
   <section>
     <h2>1. Data Storage <span class="pill">On-device only</span></h2>
-    <p>Your nutrition logs, food entries, weight records, profile information, and goals are stored <strong>locally on your device</strong>. This data is never transmitted to us. We do not operate any servers or databases that store your personal data.</p>
+    <p>Your nutrition logs, food entries, weight records, profile information, and goals are stored <strong>locally on your device</strong>. This data is never transmitted to our servers or any third party. We do not maintain any databases that store your personal health or nutrition data.</p>
   </section>
 
   <section>
     <h2>2. Camera &amp; Photo Library Access</h2>
-    <p>The App uses your camera to scan food and barcodes for nutrition tracking. You may also select photos from your photo library for AI-powered food analysis. Camera and photo data is processed in real time and is <strong>never stored, uploaded, or shared</strong>.</p>
+    <p>The App uses your camera to scan food and barcodes for nutrition tracking. You may also select photos from your photo library for AI-powered food analysis. When you use the AI Food Scanner, your food photo is sent to a cloud AI service (Google Gemini) for analysis. <strong>Photos are processed in real time and are not stored on any server after analysis is complete.</strong> No photos are ever shared with third parties beyond this processing step.</p>
   </section>
 
   <section>
@@ -137,7 +137,13 @@
 
   <section>
     <h2>4. AI Features</h2>
-    <p>The App uses on-device AI to analyze food photos and estimate nutrition. All AI processing runs <strong>entirely on your device</strong>. No food photos or analysis data leave your device.</p>
+    <p>The App uses cloud-based AI (Google Gemini) to power the nutrition coach and food scanner. When you use these features, your messages and food photos are sent to our server, which forwards them to Google's AI service for processing. The data sent includes:</p>
+    <ul>
+      <li>Your coach messages and questions</li>
+      <li>Your daily calorie and macro context (goal, consumed, remaining)</li>
+      <li>Food photos (for the AI scanner only)</li>
+    </ul>
+    <p><strong>No personal identifiers (name, email, account info) are included in AI requests.</strong> A randomly generated device identifier is used solely for rate limiting purposes. Google's use of this data is governed by the <a href="https://ai.google.dev/gemini-api/terms" target="_blank">Gemini API Terms of Service</a>.</p>
   </section>
 
   <section>
@@ -146,11 +152,8 @@
   </section>
 
   <section>
-    <h2>6. Optional Third-Party Services</h2>
-    <p>The App includes an optional web search feature in the Coach tab that, if you choose to enable it, sends search queries to a third-party search provider. This feature is <strong>off by default</strong> and requires you to provide your own credentials. Any credentials you provide are stored on your device and are never transmitted to us. If enabled, data sent is governed by the respective third party's privacy policy:</p>
-    <ul>
-      <li><a href="https://brave.com/privacy/browser/" target="_blank">Brave Privacy Policy</a></li>
-    </ul>
+    <h2>6. Rate Limiting</h2>
+    <p>To ensure fair usage, the App generates a random device identifier (UUID) on first launch. This identifier is used only to enforce daily usage limits on AI features. It is not linked to your identity, Apple ID, or any personal information. The identifier is stored on your device and on our rate-limiting server. <strong>No usage data, message content, or personal information is stored alongside it.</strong></p>
   </section>
 
   <section>
