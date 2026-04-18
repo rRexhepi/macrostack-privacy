@@ -128,7 +128,7 @@
 
   <section>
     <h2>2. Camera &amp; Photo Library Access</h2>
-    <p>The App uses your camera to scan food and barcodes for nutrition tracking. You may also select photos from your photo library for AI-powered food analysis. When you use the AI Food Scanner, your food photo is sent to a cloud AI service (Google Gemini) for analysis. <strong>Photos are processed in real time and are not stored on any server after analysis is complete.</strong> No photos are ever shared with third parties beyond this processing step.</p>
+    <p>The App uses your camera to scan food and barcodes for nutrition tracking. You may also select photos from your photo library for AI-powered food analysis. When you use the AI Food Scanner, your food photo is sent through our proxy server to Google's Gemini API for analysis. We use the <strong>paid Gemini API tier</strong>, which means Google does not use your photo or the returned analysis to train or improve its products, and does not route them to human reviewers. Google retains the request only for a limited window to detect abuse of its service and to meet legal requirements. <strong>The App itself never stores your food photos on our servers.</strong> No photos are shared with any third party beyond Google for the single purpose of this analysis.</p>
   </section>
 
   <section>
@@ -148,13 +148,14 @@
 
   <section>
     <h2>5. AI Features</h2>
-    <p>The App uses cloud-based AI (Google Gemini) to power the nutrition coach and food scanner. When you use these features, your messages and food photos are sent to our server, which forwards them to Google's AI service for processing. The data sent includes:</p>
+    <p>The App uses cloud-based AI (Google Gemini) to power the nutrition coach and food scanner. When you use these features, your messages and food photos are sent to our proxy server, which forwards them to Google's Gemini API for processing. The data sent includes:</p>
     <ul>
       <li>Your coach messages and questions</li>
       <li>Your daily calorie and macro context (goal, consumed, remaining)</li>
       <li>Food photos (for the AI scanner only)</li>
     </ul>
-    <p><strong>No personal identifiers (name, email, account info) are included in AI requests.</strong> A randomly generated device identifier is used solely for rate limiting purposes. Google's use of this data is governed by the <a href="https://ai.google.dev/gemini-api/terms" target="_blank">Gemini API Terms of Service</a>.</p>
+    <p><strong>No personal identifiers (name, email, account info) are included in AI requests.</strong> A randomly generated device identifier is used by our proxy solely for rate limiting and is not forwarded to Google.</p>
+    <p>We use the <strong>paid Gemini API tier</strong>. Under Google's paid tier terms, Google does not use your prompts or responses to train or improve its products, and does not route them to human reviewers. Google retains requests only for a limited window to detect abuse of its service and for legal compliance. Google's full handling of this data is governed by the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Terms of Service</a>.</p>
   </section>
 
   <section>
