@@ -122,7 +122,7 @@
 
   <section>
     <h2>1. Data Storage <span class="pill">On-device only</span></h2>
-    <p>Your nutrition logs, food entries, weight records, profile information, and goals are stored <strong>locally on your device</strong>. This data is never transmitted to us. We do not operate any servers or databases that store your personal data.</p>
+    <p>Your nutrition logs, food entries, weight records, profile information, and goals are stored <strong>locally on your device</strong>. This log data is never transmitted to us, and we do not maintain any database that stores it. The AI coach and food scanner route limited data through our proxy server to work, see Section 4.</p>
   </section>
 
   <section>
@@ -137,7 +137,9 @@
 
   <section>
     <h2>4. AI Features</h2>
-    <p>On supported devices, the App uses on-device AI to analyze food photos and estimate nutrition. All on-device AI processing runs <strong>entirely on your phone</strong>. No food photos or analysis data leave your device.</p>
+    <p>The App uses cloud-based AI (Google Gemini), accessed through our proxy server, to power the nutrition coach and food scanner. Food photos are first classified <strong>on your device</strong> using ML Kit; by default only the resulting text description, your coach messages, and your macro context are sent to the proxy, which forwards them to Google's Gemini API. <strong>Your food photos stay on your device unless you turn on optional image sharing</strong> (off by default, see Section 5).</p>
+    <p>A randomly generated device identifier is sent to our proxy solely to enforce daily rate limits. It is not linked to your identity, and no message content or personal information is stored alongside it.</p>
+    <p>We use the <strong>paid Gemini API tier</strong>. Under Google's paid tier terms, Google does not use your prompts or responses to train its products or route them to human reviewers, and retains requests only briefly for abuse detection and legal compliance. See the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Terms</a>.</p>
   </section>
 
   <section>
