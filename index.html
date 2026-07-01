@@ -106,7 +106,7 @@
 <header>
   <img src="logo.png" alt="MacroStack AI" />
   <h1>MacroStack AI</h1>
-  <p>Privacy Policy &nbsp;&middot;&nbsp; Apple / iOS &nbsp;&middot;&nbsp; Last updated June 6, 2026</p>
+  <p>Privacy Policy &nbsp;&middot;&nbsp; Apple / iOS &nbsp;&middot;&nbsp; Last updated July 1, 2026</p>
 </header>
 
 <main>
@@ -117,12 +117,16 @@
       what information the App accesses, how it is used, and how your data is protected.
       We take privacy seriously and collect only what is strictly necessary to provide the app's features.
     </p>
+    <p style="margin-top: 12px;">
+      <strong>We do not sell your personal data, and we never will.</strong> We have no advertising
+      partners, no analytics providers, and no data brokers. Our only revenue is your payments.
+    </p>
     <p class="platform-note">Looking for the Android privacy policy? <a href="android.html">View it here</a>. Need help? <a href="support.html">Visit support</a>.</p>
   </section>
 
   <section>
     <h2>1. Data Storage <span class="pill">On-device only</span></h2>
-    <p>Your nutrition logs, food entries, weight records, profile information, and goals are stored <strong>locally on your device</strong> using Apple's on-device database (SwiftData). This data is never transmitted to our servers or any third party. We do not maintain any databases that store your personal health or nutrition data.</p>
+    <p>Your nutrition logs, food entries, weight records, profile information, and goals are stored <strong>locally on your device</strong> using Apple's on-device database (SwiftData). This log data is never uploaded to any account, and we do not maintain any database that stores your personal health or nutrition data. The AI coach and food scanner route limited data through our proxy server to generate replies. Exactly what is sent is listed in Section 4.</p>
     <p>The home-screen and lock-screen widgets read a small snapshot of today's totals (calories, macros, streak) from a shared on-device App Group container. This snapshot also stays on your device and is never transmitted.</p>
   </section>
 
@@ -142,6 +146,8 @@
     <ul>
       <li>Your coach messages and questions</li>
       <li>Your daily calorie and macro context (goal, consumed, remaining)</li>
+      <li>A short list of candidate foods from the app's bundled database, used to keep suggestions grounded</li>
+      <li>When you ask for a weekly recap: your last 7 days' averages (calories and macros), days logged, adherence to your goal, logging streak, and your weight change for that week if you logged weigh-ins</li>
       <li>Food photos (for the AI scanner only)</li>
     </ul>
     <p><strong>No personal identifiers (name, email, account info) are included in AI requests.</strong> A randomly generated device identifier is used by our proxy solely for rate limiting and is not forwarded to Google.</p>
