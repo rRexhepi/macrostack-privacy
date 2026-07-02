@@ -106,7 +106,7 @@
 <header>
   <img src="logo.png" alt="MacroStack AI" />
   <h1>MacroStack AI</h1>
-  <p>Privacy Policy &nbsp;&middot;&nbsp; Apple / iOS &nbsp;&middot;&nbsp; Last updated July 1, 2026</p>
+  <p>Privacy Policy &nbsp;&middot;&nbsp; Apple / iOS &nbsp;&middot;&nbsp; Last updated July 2, 2026</p>
 </header>
 
 <main>
@@ -144,11 +144,14 @@
     <h2>4. AI Features</h2>
     <p>The App uses cloud-based AI (Google Gemini) to power the nutrition coach and food scanner. When you use these features, your messages and food photos are sent to our proxy server, which forwards them to Google's Gemini API for processing. The data sent includes:</p>
     <ul>
-      <li>Your coach messages and questions</li>
+      <li>Your coach messages and questions, including recent turns of the current conversation so the coach can follow the thread</li>
       <li>Your daily calorie and macro context (goal, consumed, remaining)</li>
+      <li>When you chat with the coach and Share Log Context is on (Settings &gt; Privacy, on by default): today's logged foods (names, meal slots, portions, calories and macros), the current local time of day (hour only), your fasting eating window and whether it is currently open if you use fasting, and app-computed progress data (average calorie intake, estimated daily burn from your logs, weight trend, and recent goal adjustments). Turning the toggle off keeps all of this out of coach requests, and weekly recaps are then generated on-device instead.</li>
+      <li>Saved dietary preferences, if you ask the coach to remember any</li>
       <li>A short list of candidate foods from the app's bundled database, used to keep suggestions grounded</li>
       <li>When you ask for a weekly recap: your last 7 days' averages (calories and macros), days logged, adherence to your goal, logging streak, and your weight change for that week if you logged weigh-ins</li>
       <li>Food photos (for the AI scanner only)</li>
+      <li>A food name you typed while logging, if you tap Estimate Macros with AI when the food isn't in the on-device database</li>
     </ul>
     <p><strong>No personal identifiers (name, email, account info) are included in AI requests.</strong> A randomly generated device identifier is used by our proxy solely for rate limiting and is not forwarded to Google.</p>
     <p>We use the <strong>paid Gemini API tier</strong>. Under Google's paid tier terms, Google does not use your prompts or responses to train or improve its products, and does not route them to human reviewers. Google retains requests only for a limited window to detect abuse of its service and for legal compliance. Google's full handling of this data is governed by the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Terms of Service</a>.</p>
