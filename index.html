@@ -106,7 +106,7 @@
 <header>
   <img src="logo.png" alt="MacroStack AI" />
   <h1>MacroStack AI</h1>
-  <p>Privacy Policy &nbsp;&middot;&nbsp; Apple / iOS &nbsp;&middot;&nbsp; Last updated September 26, 2026</p>
+  <p>Privacy Policy &nbsp;&middot;&nbsp; Apple / iOS &nbsp;&middot;&nbsp; Last updated September 27, 2026</p>
 </header>
 
 <main>
@@ -125,9 +125,11 @@
   </section>
 
   <section>
-    <h2>1. Data Storage <span class="pill">On-device only</span></h2>
-    <p>Your nutrition logs, food entries, weight records, profile information, and goals are stored <strong>locally on your device</strong> using Apple's on-device database (SwiftData). This log data is never uploaded to any account, and we do not maintain any database that stores your personal health or nutrition data. The AI coach and food scanner route limited data through our proxy server to generate replies. Exactly what is sent is listed in Section 5.</p>
+    <h2>1. Data Storage <span class="pill">On-device, plus your own iCloud Drive if you choose</span></h2>
+    <p>Your nutrition logs, food entries, weight records, profile information, and goals are stored <strong>locally on your device</strong> using Apple's on-device database (SwiftData). This log data is never uploaded to any account we hold, and we do not maintain any database that stores your personal health or nutrition data. The AI coach and food scanner route limited data through our proxy server to generate replies. Exactly what is sent is listed in Section 5.</p>
     <p>The home-screen and lock-screen widgets read a small snapshot of today's totals (calories, macros, streak) from a shared on-device App Group container. This snapshot also stays on your device and is never transmitted.</p>
+    <p><strong>Automatic backups.</strong> The App keeps a backup file of its own data on your device, refreshed at most once an hour, in a folder you can see in the Files app under <em>On My iPhone &rarr; MacroStack</em>. It stays on the device and is included in your iPhone backups like the rest of the App's data. You can turn this off in <em>Settings &rarr; Backup</em>, which also removes the folder.</p>
+    <p><strong>iCloud Drive backup (optional, off by default).</strong> If you turn on <em>Settings &rarr; Backup &rarr; iCloud Drive</em>, the App keeps a copy of that backup file in your own iCloud Drive, in a MacroStack folder under <em>Files &rarr; iCloud Drive</em>. That copy lives in your Apple account, is encrypted by Apple in transit and at rest, and is readable only by you and by MacroStack on devices signed into your account. We have no access to it and no servers are involved: it is a file in your storage, the same as one you would save there yourself. It exists so your data survives deleting the App or moving to a new iPhone. Weigh-ins that came into MacroStack from Apple Health are left out of the iCloud copy, in keeping with Apple's HealthKit rules. Turning the setting off stops the copies and removes the MacroStack folder from your iCloud Drive. You can also delete it yourself in Files at any time.</p>
   </section>
 
   <section>
@@ -147,7 +149,7 @@
       <li><strong>Written to Health:</strong> your body weight whenever you log, edit, or delete a weigh-in, and each day's total calories, protein, carbohydrates, and fat after any logging change. An edit replaces the earlier entry rather than adding to it.</li>
       <li><strong>Read from Health:</strong> body weight entries that other apps or devices (for example a smart scale) add to Health, so they appear in your weight history and inform your calorie goal. The App reads no other Health category.</li>
     </ul>
-    <p>Health data stays on your device, stored by Apple. It is never sent to our servers, never used for advertising or marketing, and never shared with anyone. Turning sync off stops all reading and writing and leaves what is already in Health untouched. You can also revoke access at any time in <em>iOS Settings &rarr; Privacy &amp; Security &rarr; Health &rarr; MacroStack AI</em>.</p>
+    <p>Health data stays on your device, stored by Apple. It is never sent to our servers, never used for advertising or marketing, and never shared with anyone. Turning sync off stops all reading and writing and leaves what is already in Health untouched. You can also revoke access at any time in <em>iOS Settings &rarr; Privacy &amp; Security &rarr; Health &rarr; MacroStack AI</em>. Weigh-ins read from Health are never placed in the optional iCloud Drive backup.</p>
   </section>
 
   <section>
