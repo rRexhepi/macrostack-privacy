@@ -170,10 +170,19 @@
     <p>Mostly. Manual food logging, barcode scanning of items in our bundled database, weight tracking, macro math, and the calorie ring all work without internet. The AI Food Scanner and AI Coach require an internet connection because they call a cloud AI model.</p>
 
     <h3>How do I export or back up my data?</h3>
-    <p>Settings &rarr; <strong>Export Data</strong>. You'll get a JSON file covering your food log, weight history, goals, and (optionally) chat history. You can password-encrypt the export. The file never touches our servers; it's shared directly from your device through whichever method you pick (AirDrop, Files, email, etc.).</p>
+    <p>MacroStack backs itself up. On iOS it keeps a backup of everything on its own, at most once an hour, in the Files app under <strong>On My iPhone &rarr; MacroStack &rarr; Backups</strong>, and every backup of your iPhone carries that folder along. For a copy you control, Settings &rarr; <strong>Export My Data</strong> gives you a JSON file covering your food log, weight history, goals, and (optionally) chat history, which you can password-encrypt. Neither file ever touches our servers; the export is shared directly from your device through whichever method you pick (AirDrop, Files, email, etc.).</p>
+
+    <h3>I deleted the app and my data is gone. Can I get it back?</h3>
+    <p>Deleting an app on iOS deletes its folder, including MacroStack's automatic backups, and we hold no copy. In order of least effort:</p>
+    <ol>
+      <li><strong>An export you saved.</strong> Reinstall, then on the setup screen tap <em>Returning user? Import your data</em> and pick the file. Everything in it comes back.</li>
+      <li><strong>Apple Health.</strong> If Health sync was on, your weigh-ins are still in Health. Reinstall, set up, then turn on Settings &rarr; Privacy &rarr; <em>Sync with Apple Health</em>: they come back on their own. Meals are not stored in Health.</li>
+      <li><strong>A backup of your iPhone</strong> made before the deletion (iCloud Backup or a computer backup). Restoring the phone from it brings the app's folder back, and MacroStack then offers your data before the setup screen. This restores the whole phone to that point, so it is the last resort.</li>
+    </ol>
+    <p>To avoid the question entirely: export before you delete, and keep the app's automatic backups on.</p>
 
     <h3>How do I delete my data?</h3>
-    <p>Settings &rarr; <strong>Reset App</strong> wipes all local data: food log, weight history, profile, goals, and chat history. Because MacroStack doesn't have user accounts or cloud storage, deleting the app from your device also deletes all personal data associated with it. There's nothing we need to delete on our end, because we don't have it.</p>
+    <p>Settings &rarr; <strong>Reset App</strong> wipes all local data: food log, weight history, profile, goals, chat history, and the automatic backups. Because MacroStack doesn't have user accounts or cloud storage, deleting the app from your device also deletes all personal data associated with it. There's nothing we need to delete on our end, because we don't have it.</p>
 
     <h3>Does MacroStack have ads?</h3>
     <p>No. No ads, no ad tracking, no data sold. Never planned, never coming.</p>
