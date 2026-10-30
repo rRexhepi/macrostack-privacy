@@ -130,8 +130,8 @@
   </section>
 
   <section>
-    <h2>2. Camera Access</h2>
-    <p>The App uses your camera solely to scan food and barcodes for nutrition tracking. Camera data is processed in real time and is <strong>never stored, uploaded, or shared</strong> unless you explicitly enable optional image sharing (see Section 6).</p>
+    <h2>2. Camera &amp; Photo Library Access</h2>
+    <p>The App uses your camera to scan food and barcodes for nutrition tracking. You may also select photos from your photo library for AI-powered food analysis. When you use the AI Food Scanner, your food photo is sent through our proxy server to Google's Gemini API for analysis. We use the <strong>paid Gemini API tier</strong>, which means Google does not use your photo or the returned analysis to train or improve its products, and does not route them to human reviewers. Google retains the request only for a limited window to detect abuse of its service and to meet legal requirements. <strong>The App itself never stores your food photos on our servers.</strong> No photos are shared with any third party beyond Google for the single purpose of this analysis. Barcode scanning happens entirely on your device.</p>
   </section>
 
   <section>
@@ -151,55 +151,54 @@
 
   <section>
     <h2>5. AI Features</h2>
-    <p>The App uses cloud-based AI (Google Gemini), accessed through our proxy server, to power the nutrition coach and food scanner. Food photos are first classified <strong>on your device</strong> using ML Kit; by default only the resulting text description, your coach messages, and your macro context are sent to the proxy, which forwards them to Google's Gemini API. When you ask for a weekly recap, the App also sends your last 7 days' averages (calories and macros), days logged, adherence to your goal, logging streak, and your weight change for that week if you logged weigh-ins. <strong>Your food photos stay on your device unless you turn on optional image sharing</strong> (off by default, see Section 5).</p>
-    <p>A randomly generated device identifier is sent to our proxy solely to enforce daily rate limits. It is not linked to your identity, and no message content or personal information is stored alongside it.</p>
-    <p>We use the <strong>paid Gemini API tier</strong>. Under Google's paid tier terms, Google does not use your prompts or responses to train its products or route them to human reviewers, and retains requests only briefly for abuse detection and legal compliance. See the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Terms</a>.</p>
-  </section>
-
-  <section>
-    <h2>6. Optional Third-Party Processing</h2>
-    <p>The App includes optional features that, if you choose to enable them, may send food-related information to third-party services for processing. These features are <strong>off by default</strong> and require you to explicitly configure them. Any credentials you provide are stored on your device and are never transmitted to us.</p>
-    <p>If you enable optional image sharing in Settings, food photos may also be sent to the cloud AI provider for improved accuracy. This is <strong>off by default</strong>. When disabled, only text descriptions are sent and your photos stay on your device.</p>
-    <p>If enabled, data sent is governed by the respective third party's privacy policies:</p>
+    <p>The App uses cloud-based AI (Google Gemini) to power the nutrition coach and food scanner. When you use these features, your messages and food photos are sent to our proxy server, which forwards them to Google's Gemini API for processing. The data sent includes:</p>
     <ul>
-      <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-      <li><a href="https://brave.com/privacy/browser/" target="_blank">Brave Privacy Policy</a></li>
+      <li>Your coach messages and questions, including recent turns of the current conversation so the coach can follow the thread</li>
+      <li>Your daily calorie and macro context (goal, consumed, remaining)</li>
+      <li>When you chat with the coach and Share Log Context is on (Settings &gt; Privacy, on by default): today's logged foods (names, meal slots, portions, calories and macros), the current local time of day (hour only), your fasting eating window and whether it is currently open if you use fasting, and app-computed progress data (average calorie intake, estimated daily burn from your logs, weight trend, and recent goal adjustments). Turning the toggle off keeps all of this out of coach requests, and weekly recaps are then generated on-device instead.</li>
+      <li>Saved dietary preferences, if you ask the coach to remember any</li>
+      <li>A short list of candidate foods from the app's bundled database, used to keep suggestions grounded</li>
+      <li>When you ask for a weekly recap: your last 7 days' averages (calories and macros), days logged, adherence to your goal, logging streak, and your weight change for that week if you logged weigh-ins</li>
+      <li>Food photos (for the AI scanner only), along with the labels the on-device image classifier found in them</li>
+      <li>A food name you typed while logging, if you tap Estimate Macros with AI when the food isn't in the on-device database</li>
     </ul>
+    <p><strong>No personal identifiers (name, email, account info) are included in AI requests.</strong> A randomly generated device identifier is used by our proxy solely for rate limiting and is not forwarded to Google.</p>
+    <p>We use the <strong>paid Gemini API tier</strong>. Under Google's paid tier terms, Google does not use your prompts or responses to train or improve its products, and does not route them to human reviewers. Google retains requests only for a limited window to detect abuse of its service and for legal compliance. Google's full handling of this data is governed by the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Terms of Service</a>.</p>
   </section>
 
   <section>
-    <h2>7. Food Database</h2>
+    <h2>6. Food Database</h2>
     <p>The App includes a bundled food database stored on your device for nutrition lookups. For barcode scans, the App may also query an external food database over the internet to retrieve additional nutrition information. In those cases, only the barcode is sent. <strong>No personal data, account information, or device identifiers are included in these requests.</strong></p>
     <p>The bundled food database is built from <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> data, &copy; Open Food Facts contributors, available under the <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">Open Database License</a>.</p>
   </section>
 
   <section>
-    <h2>8. Data Export</h2>
+    <h2>7. Data Export</h2>
     <p>The App allows you to export your data as a backup file. Exported files are created temporarily on your device and shared only through the method you choose. We never receive or have access to your exported data.</p>
   </section>
 
   <section>
-    <h2>9. Internet Permission</h2>
+    <h2>8. Internet Permission</h2>
     <p>The App requires internet access for food database lookups, optional third-party AI features, and optional web search. All network connections use encrypted HTTPS. The App does not make any network requests in the background or when not in active use.</p>
   </section>
 
   <section>
-    <h2>10. Analytics &amp; Crash Reporting</h2>
+    <h2>9. Analytics &amp; Crash Reporting</h2>
     <p>The App does not collect analytics, advertising data, or crash reports. No usage data is transmitted.</p>
   </section>
 
   <section>
-    <h2>11. Children's Privacy</h2>
+    <h2>10. Children's Privacy</h2>
     <p>The App is not directed at children under 13. We do not knowingly collect any information from children.</p>
   </section>
 
   <section>
-    <h2>12. Changes to This Policy</h2>
+    <h2>11. Changes to This Policy</h2>
     <p>We may update this policy from time to time. Any changes will be reflected on this page with an updated date. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
   </section>
 
   <section>
-    <h2>13. Contact</h2>
+    <h2>12. Contact</h2>
     <p>If you have any questions about this privacy policy, please contact us at: <a href="mailto:rexhep.rexhepi.5@gmail.com">rexhep.rexhepi.5@gmail.com</a></p>
   </section>
 
